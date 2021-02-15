@@ -32,11 +32,18 @@ $ php-legal-licenses generate
 > Done!
 ```
 
+By default the licence information is shown as name only, to show full licence use `--full` option:
+
+```
+$ php-legal-licenses generate --full
+```
+
 You can also hide dependency version with `--hide-version` option:
 
 ```
 $ php-legal-licenses generate --hide-version
 ```
+
 
 You can output csv file with `--csv` option:
 
