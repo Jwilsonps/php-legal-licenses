@@ -13,7 +13,7 @@ class GenerateCommand extends DependencyLicenseCommand
      */
     private $hideVersion = false;
     private $toCsv = false;
-    private $fullLicenceText = false;
+    private $fullLicenceText = 'yes';
 
     /**
      * Configure the command options.
@@ -42,7 +42,7 @@ class GenerateCommand extends DependencyLicenseCommand
     {
         $this->hideVersion = $input->getOption('hide-version');
         $this->toCsv = $input->getOption('csv');
-        $this->fullLicenceText = $input->getOption('full');
+        $this->fullLicenceText = $input->getOption('full') ?? 'yes';
         $dependencies = $this->getDependencyList();
 
         $output->writeln('<info>Generating Licenses file...</info>');
